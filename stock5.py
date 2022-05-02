@@ -15,12 +15,12 @@ from plotly import graph_objs as go
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-st.title('Stock Forecast App')
+st.title('Stock Prediction App')
 
 stocks = ('GOOG', 'AAPL', 'MSFT', 'ADANIGREEN.NS','INFY', 'TTM','TWTR')
-selected_stock = st.selectbox('Select dataset for prediction', stocks)
+selected_stock = st.selectbox(label='Select the company name for prediction', options=stocks)
 
-n_years = st.slider('Years of prediction:', 1, 4)
+n_years = st.radio('Years of prediction:',options=(1,2,3,4))
 period = n_years * 365
 
 
@@ -61,8 +61,9 @@ forecast = m.predict(future)
 st.subheader('Forecast data')
 st.write(forecast.tail())
     
-st.write(f'Forecast plot for {n_years} years')
-fig1 = plot_plotly(m, forecast)
+st.subheader(f'Forecast plot for {n_years} years')
+fig1 = plot_plotly(m, forecast,xlabel='Time',ylabel='stock price')
+
 st.plotly_chart(fig1)
 
 st.write("Forecast components")
