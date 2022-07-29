@@ -20,6 +20,7 @@ st.title('Stock Prediction App')
 stocks = ('UVXY','GOOG', 'AAPL', 'MSFT', 'ADANIGREEN.NS','INFY', 'TTM','TWTR'
     
  'SVXY',
+ 'YESBANK.NS',
  'UVIX',
  'ARKX',
  'AAAU',
