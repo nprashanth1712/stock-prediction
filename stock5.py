@@ -21,6 +21,7 @@ stocks = ('UVXY','GOOG', 'AAPL', 'MSFT', 'ADANIGREEN.NS','INFY', 'TTM','TWTR'
     
  'SVXY',
  'YESBANK.NS',
+ 'TATAINVEST.NS',
  'UVIX',
  'ARKX',
  'AAAU',
