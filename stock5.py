@@ -512,9 +512,6 @@ def plot_raw_data():
 	
 plot_raw_data()
 
-hist = data.history(period="max")
-st.subheader(hist)
-	
 
 # Predict forecast with Prophet.
 df_train = data[['Date','Close']]
